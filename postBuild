@@ -1,3 +1,67 @@
-jupyter nbextension install --py hide_code
-jupyter nbextension enable --py hide_code
-jupyter serverextension enable --py hide_code
+#!/bin/bash
+
+# This example was copied from: https://github.com/fomightez/jupyter-rise_with-hide_code/blob/7c3d17a02b1bafa897ca55b1b50435877e722739/postBuild
+
+# Along with Jupyter-RISE that works with Binder (from )https://github.com/binder-examples/jupyter-rise,
+# enable hide_code extension, see https://github.com/kirbs-/hide_code and 
+# https://github.com/binder-examples/jupyter-extension/blob/master/postBuild
+# with server extension based on https://github.com/matheusmota/facens-dataviz/blob/54cbfb373916c7180c65c2ed7500ac890252bd98/binder/postBuild
+# and https://jupyter-notebook.readthedocs.io/en/4.x/examples/Notebook/rstversions/Distributing%20Jupyter%20Extensions%20as%20Python%20Packages.html#enable-a-server-extension
+# and https://jupyter-notebook.readthedocs.io/en/4.x/examples/Notebook/rstversions/Distributing%20Jupyter%20Extensions%20as%20Python%20Packages.html#install-and-enable-the-server-extension-and-nbextension
+# and https://github.com/fomightez/jupyter_hide_code
+jupyter contrib nbextension install --user
+jupyter nbextension install --sys-prefix hide_code
+jupyter nbextension enable --sys-prefix hide_code
+#jupyter serverextension enable --sys-prefix jupyter_server_proxy
+jupyter serverextension enable --sys-prefix hide_code
+
+# Try to fix the install based on https://github.com/kirbs-/hide_code/issues/29#issuecomment-274800019
+# Note that I used that even though different because old code listed at that link gave error saying
+# no install attriibute & only thing with install I saw when I ran `!python -c "import hide_code.hide_code as hc;print(dir(hc));"`
+python -c "import hide_code.hide_code as hc;hc.install_bootstrapped_files()" 
+
+
+
+# Implement install fix described at https://stackoverflow.com/a/39169844/8508004 to get hide_code
+# showing in under `View` > `cell toolbar` menu and across toolbar proper.
+# To make general, going to try avoiding hardcoding in the Python version since hoping
+# to down the road combine with jupyter-rise and that install produces Python 3.6 at the moment.
+# Python version assignment based on https://stackoverflow.com/questions/14735366/cannot-assign-the-output-of-python-v-to-a-variable-in-bash and sending multiple
+# lines of text to output based on https://www.unix.com/shell-programming-and-scripting/31827-echo-block-lines.html
+# and redirect.
+pyver=$(python -c "import sys; print (f'{sys.version_info.major}.{sys.version_info.minor}')")
+cd ~/.local/share/jupyter/nbextensions/
+cp -r hide_input hide_code
+cd hide_code/
+cp /srv/conda/envs/notebook/lib/python$pyver/site-packages/notebook/static/custom/hide_code.js ./main.js
+rm hide-input.yaml 
+cat <<EOF > hide-code.yaml
+Type: IPython Notebook Extension
+Compatibility: 3.x, 4.x, 5.x
+Main: main.js
+Name: Hide code
+Icon: icon.png
+Description: "toggle display of selected code cell's input"
+Link: readme.md
+EOF
+cat <<EOF > readme.md
+Hide Code
+==========
+
+This extension allows hiding of all or specified, individual code cells in a notebook. See
+[here](https://github.com/kirbs-/hide_code#hide_code).
+EOF
+# since it is now listed in the nbextensions like the others in `contrib nbextension` enable
+# it like them, based on python-markdown enabling in https://github.com/binder-examples/jupyter-extension/blob/1fecbd818ef84980ec1043e4b57edebf7053d1f9/postBuild
+jupyter nbextension enable hide_code/main
+
+cd ~
+# enable xvfb with wkhtmltopdf as described here so it will work with pdfkit similar to as shown at https://github.com/JazzCore/python-pdfkit/wiki/Using-wkhtmltopdf-without-X-server and more like how I activated orca with xvfb at https://github.com/fomightez/orca-plotly-binderized/blob/master/postBuild 
+# When this works, it should allow the test at the last line of the code at https://github.com/JazzCore/python-pdfkit/wiki/Using-wkhtmltopdf-without-X-server , i.e., `wkhtmltopdf http://www.google.com output.pdf`, at least not give that it cannot connect to X display
+mkdir -p ~/.local/bin
+printf '#!/bin/bash \nxvfb-run --auto-servernum --server-args "-screen 0 640x480x24" /usr/bin/wkhtmltopdf  "$@"' > ~/.local/bin/wkhtmltopdf.sh
+chmod 777 ~/.local/bin/wkhtmltopdf.sh
+ln -s ~/.local/bin/wkhtmltopdf.sh ~/.local/bin/wkhtmltopdf
+
+# leave with home as working directory (not sure if necessary)
+cd ~
