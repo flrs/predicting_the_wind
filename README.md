@@ -5,9 +5,9 @@
 ## Contents
 
 ### Presentation
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=presentation.ipynb) *(start here)* – [presentation.ipynb](./presentation.ipynb) 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=presentation.ipynb) *(recommended start)* – [presentation.ipynb](./presentation.ipynb) 
 
-*If the presentation on Binder does not start automatically, click this button in the toolbar: <img src="./images/presentation_start_button.png" width="22" height="16">*
+*If the presentation on Binder does not start automatically, click this button in the toolbar: <img src="./images/presentation_start_button.png" width="32.5" height="24.5">*
 
 Presentation about data science in wind resource assessment. The presentation is about the fictitious scenario of 
 building a wind farm on the hills around the AI incubator [The Sandbox San Diego](https://www.thesandbox.ai/). It 
