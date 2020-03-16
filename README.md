@@ -7,21 +7,26 @@
 ### Presentation
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=presentation.ipynb) *(recommended start)* – [presentation.ipynb](./presentation.ipynb) 
 
-*If the presentation on Binder does not start automatically, click this button in the toolbar: <img src="./images/presentation_start_button.png" width="32.5" height="24.5">*
+*Update 2020-03-15: Now includes information about how to estimate turbine power output with long-term wind estimates.*
 
 Presentation about data science in wind resource assessment. The presentation is about the fictitious scenario of 
 building a wind farm on the hills around the AI incubator [The Sandbox San Diego](https://www.thesandbox.ai/). It 
-explains how the wind can be measured and how these measurements can be used together with climate models and ground 
-station data to generate a long-term estimate of the wind. From a data science perspective, the presentation clarifies 
-where domain knowledge of wind and fluid dynamics can help improve the estimate.
+explains how the wind can be measured and how the measurement can be used together with climate models and ground 
+station data to generate a long-term estimate of the wind. Subsequently, the presentation shows how to use that estimate
+ to predict wind turbine power output. Finally, the presentation puts the output of the fictitious wind farm into the
+ broader context of the California power grid.
+ 
+From a data science perspective, the presentation touches on data exploration, modeling and validation, and clarifies
+ where domain knowledge of wind and fluid dynamics can help improve the wind estimate.
 
-The presentation is built in an interactive [Jupyter Notebook](https://jupyter.org/) that uses the 
-[RISE Jupyter extension](https://rise.readthedocs.io/) and the 
-[hide_code extension](https://github.com/kirbs-/hide_code). It uses 
-[Folium](https://python-visualization.github.io/folium/) to display maps, 
-[SciPy's](https://www.scipy.org/scipylib/index.html) orthogonal distance regression, and 
-[scikit-learn's](https://scikit-learn.org) RandomForestRegressor. In addition, the presentation shows how the 
-[brightwind](https://github.com/brightwind-dev/brightwind) Python module helps to analyze wind patterns.
+The presentation uses the following tool stack:
+ - [Jupyter Notebook](https://jupyter.org/) as a basis 
+ - [RISE Jupyter extension](https://rise.readthedocs.io/) for presenting the notebook 
+ - [hide_code extension](https://github.com/kirbs-/hide_code) for hiding some (long-ish) code to build maps 
+ - [Folium](https://python-visualization.github.io/folium/) to display maps
+ - [SciPy's](https://www.scipy.org/scipylib/index.html) orthogonal distance regression
+ - [scikit-learn's](https://scikit-learn.org) RandomForestRegressor
+ - [brightwind](https://github.com/brightwind-dev/brightwind) to support wind resource assessment tasks
 
 ### Download and Pre-Process ASOS Data
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownload_and_preprocess_asos_data.ipynb) – [download_and_preprocess_asos_data.ipynb](./data_acquisition/download_and_preprocess_asos_data.ipynb)
