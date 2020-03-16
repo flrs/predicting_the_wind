@@ -1,6 +1,7 @@
 # Predicting the Wind: Data Science in Wind Resource Assessment
 
-2020-03-11, [PyData San Diego Meetup](https://www.meetup.com/PyData-San-Diego/)
+This repository contains a presentation and additional content about data science in wind resource assessment. The
+presentation was held on 2020-03-11 at the [PyData San Diego Meetup](https://www.meetup.com/PyData-San-Diego/).
 
 ## Contents
 
