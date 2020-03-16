@@ -4,7 +4,7 @@
 
 ## Contents
 
-### Main Presentation: Predicting the Wind: Data Science in Wind Resource Assessment
+### Presentation
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=presentation.ipynb) *(recommended start)* – [presentation.ipynb](./presentation.ipynb) 
 
 *Update 2020-03-15: Now includes information about how to estimate turbine power output with long-term wind estimates.*
