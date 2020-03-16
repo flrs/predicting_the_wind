@@ -4,7 +4,7 @@
 
 ## Contents
 
-### Presentation
+### Main Presentation: Predicting the Wind: Data Science in Wind Resource Assessment
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=presentation.ipynb) *(recommended start)* – [presentation.ipynb](./presentation.ipynb) 
 
 *Update 2020-03-15: Now includes information about how to estimate turbine power output with long-term wind estimates.*
@@ -28,13 +28,13 @@ The presentation uses the following tool stack:
  - [scikit-learn's](https://scikit-learn.org) RandomForestRegressor
  - [brightwind](https://github.com/brightwind-dev/brightwind) to support wind resource assessment tasks
 
-### Download and Pre-Process ASOS Data
+### Additional Content: Download and Pre-Process ASOS Data
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownload_and_preprocess_asos_data.ipynb) – [download_and_preprocess_asos_data.ipynb](./data_acquisition/download_and_preprocess_asos_data.ipynb)
 
 A demonstration about how to download and preprocess meteorological data from ASOS measurement stations with Python 
 in a Jupyter notebook.
 
-### Synthesizing a (Mock) Wind Speed Time Series
+### Additional Content: Synthesizing a (Mock) Wind Speed Time Series
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fsynthesizing_a_wind_speed_time_series.ipynb) – [synthesizing_a_wind_speed_time_series.ipynb](./data_acquisition/synthesizing_a_wind_speed_time_series.ipynb)
 
 A Jupyter notebook that deals with how to come up with an artificial met mast time series when you only have some 
