@@ -8,7 +8,7 @@ presentation was held on 2020-03-11 at the [PyData San Diego Meetup](https://www
 ### Presentation
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=presentation.ipynb) *(recommended start)* – [presentation.ipynb](./presentation.ipynb) 
 
-*Update 2020-03-15: Now includes information about how to estimate turbine power output with long-term wind estimates.*
+*Update 2020-03-15: Added information about how to estimate turbine power output with long-term wind estimates.*
 
 Presentation about data science in wind resource assessment. The presentation is about the fictitious scenario of 
 building a wind farm on the hills around the AI incubator [The Sandbox San Diego](https://www.thesandbox.ai/). It 
@@ -32,8 +32,15 @@ The presentation uses the following tool stack:
 ### Additional Content: Download and Pre-Process ASOS Data
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownload_and_preprocess_asos_data.ipynb) – [download_and_preprocess_asos_data.ipynb](./data_acquisition/download_and_preprocess_asos_data.ipynb)
 
-A demonstration about how to download and preprocess meteorological data from ASOS measurement stations with Python 
-in a Jupyter notebook.
+A notebook about how to download and preprocess meteorological data from ASOS measurement stations with Python 
+in a Jupyter notebook. In addition to showing how to download the data, the notebook also shows how to quickly produce a 12x24 plot with matplotlib and pandas.
+
+### Additional Content: Downloading ERA5 data in Python
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownloading_ERA5_data_in_python.ipynb) – [downloading_ERA5_data_in_python.ipynb](./data_acquisition/downloading_ERA5_data_in_python.ipynb)
+
+<img src="./images/temporal_wind_pattern.png" width="400px" alt="Temporal Wind Pattern"></img>
+
+A notebook that shows how to download and transform ERA5 reanalysis data from the [Copernicus Climate Change Service](https://cds.climate.copernicus.eu/cdsapp#!/home) in Python. The notebook is a classical example of an ETL process and includes some interesting wind data exploration snippets.
 
 ### Additional Content: Synthesizing a (Mock) Wind Speed Time Series
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fsynthesizing_a_wind_speed_time_series.ipynb) – [synthesizing_a_wind_speed_time_series.ipynb](./data_acquisition/synthesizing_a_wind_speed_time_series.ipynb)
