@@ -3,10 +3,10 @@
 This repository contains a presentation and additional content about data science in wind resource assessment. The
 presentation was held on 2020-03-11 at the [PyData San Diego Meetup](https://www.meetup.com/PyData-San-Diego/).
 
-## Contents
-
 ### Presentation
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=presentation.ipynb) *(recommended start)* – [presentation.ipynb](./presentation.ipynb) 
+
+<img src="./images/presentation_thumb.gif" width="400px" alt="Thumbnail of presentation"></img>
 
 *Update 2020-03-15: Added information about how to estimate turbine power output with long-term wind estimates.*
 
@@ -37,7 +37,7 @@ The presentation uses the following tool stack:
 A notebook about how to download and preprocess meteorological data from ASOS measurement stations with Python 
 in a Jupyter notebook. In addition to showing how to download the data, the notebook also shows how to quickly produce a 12x24 plot with matplotlib and pandas.
 
-### Additional Content: Downloading ERA5 data in Python
+### Additional Content: Downloading ERA5 Data in Python
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownloading_ERA5_data_in_python.ipynb) – [downloading_ERA5_data_in_python.ipynb](./data_acquisition/downloading_ERA5_data_in_python.ipynb)
 
 <img src="./images/temporal_wind_pattern.png" width="400px" alt="Temporal Wind Pattern"></img>
