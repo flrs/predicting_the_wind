@@ -5,7 +5,6 @@ channels:
   - defaults
 dependencies:
   - folium
-  - hide_code
   - jupyterlab
   - matplotlib
   - netcdf4
@@ -17,3 +16,4 @@ dependencies:
   - scikit-learn
   - pip:
     - brightwind
+    - hide_code
