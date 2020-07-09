@@ -2,6 +2,7 @@ name: predicting_the_wind
 channels:
   - anaconda
   - conda-forge
+  - damianavila82
   - defaults
 dependencies:
   - folium
@@ -12,8 +13,11 @@ dependencies:
   - pandas
   - pip
   - pytz
+  - rise
   - scipy
   - scikit-learn
   - pip:
     - brightwind
-    - hide_code
+    - hide_code==0.5.2
+    - jupyter_contrib_nbextensions
+    - pdfkit
