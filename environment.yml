@@ -12,6 +12,7 @@ dependencies:
   - numpy
   - pandas
   - pip
+  - pyarrow
   - pytz
   - rise
   - scipy
