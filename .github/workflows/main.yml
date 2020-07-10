@@ -3,6 +3,7 @@ on:
   push:
     paths:
     - 'environment.yml'
+    - '.github/workflows/main.yml'
 
 jobs:
   Binder:
@@ -12,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: update jupyter dependencies with repo2docker
-        uses: flrs/repo2docker-action
+        uses: flrs/repo2docker-action@master
         with:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
