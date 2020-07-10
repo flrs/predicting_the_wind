@@ -1,8 +1,8 @@
 name: predicting_the_wind
 channels:
+  - damianavila82
   - anaconda
   - conda-forge
-  - damianavila82
   - defaults
 dependencies:
   - folium
