@@ -10,11 +10,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: cache binder build on mybinder.org
+      - name: update jupyter dependencies with repo2docker
         uses: machine-learning-apps/repo2docker-action@0.2
         with:
-          NO_PUSH: true
-          MYBINDERORG_TAG: ${{ github.event.ref }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          BINDER_CACHE: true
+          PUBLIC_REGISTRY_CHECK: true
