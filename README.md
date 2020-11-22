@@ -4,9 +4,7 @@ This repository contains material for a hands-on tutorial and additional content
 assessment. The tutorial was held on 2020-03-11 at the [PyData San Diego Meetup](https://www.meetup.com/PyData-San-Diego/).
 
 ### Tutorial
-**Interactive version:** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=tutorial_for_self_study.ipynb) *(recommended start, but may take a bit to load)*
-
-**Static version:** [tutorial_for_self_study.ipynb](./tutorial_for_self_study.ipynb) 
+Interactive: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=tutorial_for_self_study.ipynb) *(recommended start, but may take a bit to load)* – Static: [tutorial_for_self_study.ipynb](./tutorial_for_self_study.ipynb) 
 
 <img src="./images/presentation_thumb.gif" width="400px" alt="Thumbnail of presentation"></img>
 
@@ -31,7 +29,7 @@ The tutorial uses the following tool stack:
  - [brightwind](https://github.com/brightwind-dev/brightwind) to support wind resource assessment tasks
 
 ### Additional Content: Download and Pre-Process ASOS Data
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownload_and_preprocess_asos_data.ipynb) – [download_and_preprocess_asos_data.ipynb](./data_acquisition/download_and_preprocess_asos_data.ipynb)
+Interactive: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownload_and_preprocess_asos_data.ipynb) – Static: [download_and_preprocess_asos_data.ipynb](./data_acquisition/download_and_preprocess_asos_data.ipynb)
 
 <img src="./images/map_and_12x24.png" width="400px" alt="Map of San Diego and 12x24 wind speed matrix"></img>
 
@@ -40,7 +38,7 @@ in a Jupyter notebook. In addition to showing how to download the data, the note
 a 12x24 plot with matplotlib and pandas.
 
 ### Additional Content: Downloading ERA5 Data in Python
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownloading_ERA5_data_in_python.ipynb) – [downloading_ERA5_data_in_python.ipynb](./data_acquisition/downloading_ERA5_data_in_python.ipynb)
+Interactive: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fdownloading_ERA5_data_in_python.ipynb) – Static: [downloading_ERA5_data_in_python.ipynb](./data_acquisition/downloading_ERA5_data_in_python.ipynb)
 
 <img src="./images/temporal_wind_pattern.png" width="400px" alt="Temporal Wind Pattern"></img>
 
@@ -49,7 +47,7 @@ A notebook that shows how to download and transform ERA5 reanalysis data from th
 classical example of an ETL process and includes some interesting wind data exploration snippets.
 
 ### Additional Content: Synthesizing a (Mock) Wind Speed Time Series
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fsynthesizing_a_wind_speed_time_series.ipynb) – [synthesizing_a_wind_speed_time_series.ipynb](./data_acquisition/synthesizing_a_wind_speed_time_series.ipynb)
+Interactive: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=data_acquisition%2Fsynthesizing_a_wind_speed_time_series.ipynb) – Static: [synthesizing_a_wind_speed_time_series.ipynb](./data_acquisition/synthesizing_a_wind_speed_time_series.ipynb)
 
 <img src="./images/met_series.png" width="400px" alt="Wind speed and direction time series plot"></img>
 
