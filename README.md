@@ -4,7 +4,7 @@ This repository contains material for a hands-on tutorial and additional content
 assessment. The tutorial was held on 2020-03-11 at the [PyData San Diego Meetup](https://www.meetup.com/PyData-San-Diego/).
 
 ### Tutorial
-Interactive: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=tutorial_for_self_study.ipynb) *(recommended start, but may take a bit to load)* – Static: [tutorial_for_self_study.ipynb](./tutorial_for_self_study.ipynb) 
+Interactive: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/flrs/predicting_the_wind/master?filepath=tutorial_for_self_study.ipynb) *(recommended start, but may take a bit to load)* – Static: [tutorial_for_self_study.ipynb](./tutorial_for_self_study.ipynb) (or [PDF](https://github.com/flrs/predicting_the_wind/raw/master/tutorial_for_self_study_static.pdf))
 
 <img src="./images/presentation_thumb.gif" width="400px" alt="Thumbnail of presentation"></img>
 
