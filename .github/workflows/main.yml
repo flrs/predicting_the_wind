@@ -4,6 +4,7 @@ on:
     paths:
     - 'environment.yml'
     - '.github/workflows/main.yml'
+  workflow_dispatch:
 
 jobs:
   Binder:
